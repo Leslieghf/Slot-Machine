@@ -4,6 +4,7 @@ namespace Slot_Machine
 {
     public static class ConsoleUtility
     {
+        #region Static Methods
         public static void WriteEnum<TEnum>() where TEnum : struct, Enum
         {
             Console.WriteLine($"\nAvailable {typeof(TEnum).Name}s");
@@ -235,5 +236,6 @@ namespace Slot_Machine
                 Console.WriteLine("\nInvalid input, retry!\n");
             } while (true);
         }
-    } 
+        #endregion
+    }
 }

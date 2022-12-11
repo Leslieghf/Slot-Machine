@@ -4,6 +4,7 @@ namespace Slot_Machine
 {
     public class SlotMachine
     {
+        #region Properties
         public GameMode SelectedGameMode
         {
             get
@@ -11,11 +12,15 @@ namespace Slot_Machine
                 return selectedGameMode;
             }
         }
+        #endregion
 
+        #region Fields
         private List<GameMode> availableGameModes;
         private GameMode selectedGameMode;
         private Player currentPlayer;
-        
+        #endregion
+
+        #region Constructors
         public SlotMachine()
         {
             availableGameModes = new List<GameMode>();
@@ -26,7 +31,9 @@ namespace Slot_Machine
             currentPlayer = new Player();
             WriteMainMenuView();
         }
+        #endregion
 
+        #region Methods
         private void WriteMainMenuView()
         {
             Console.Clear();
@@ -102,5 +109,6 @@ namespace Slot_Machine
         {
             WriteMainMenuView();
         }
+        #endregion
     }
 }

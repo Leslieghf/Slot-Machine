@@ -4,12 +4,15 @@ namespace Slot_Machine
 {
     public class GameMode
     {
+        #region Fields
         public readonly string Name;
         public readonly int MinBet;
         public readonly int MaxBet;
         public readonly float BetMultiplier;
         public readonly float WinProbability;
+        #endregion
 
+        #region Constructors
         public GameMode(string name, int minBet, int maxBet, float betMultiplier, float winProbability)
         {
             Name = name;
@@ -18,7 +21,9 @@ namespace Slot_Machine
             BetMultiplier = betMultiplier;
             WinProbability = winProbability;
         }
+        #endregion
 
+        #region Methods
         public void PlayRound(SlotMachine host, Player player, out bool playAgain)
         {
             Console.Clear();
@@ -108,10 +113,13 @@ namespace Slot_Machine
                 Console.Clear();
             } while (true);
         }
+        #endregion
 
+        #region Overrides
         public override string ToString()
         {
             return $"{Name}:\n\t Min Bet: {MinBet}\t\t Max Bet: {MaxBet}\t\t Win Multiplier: {BetMultiplier}\t\t Win Probability: {WinProbability}";
         }
+        #endregion
     }
 }

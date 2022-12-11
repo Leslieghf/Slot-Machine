@@ -5,9 +5,15 @@ namespace Slot_Machine
 {
     public class Player
     {
+        #region Properties
         public string Name { get; private set; }
-        public int Balance;
+        #endregion
 
+        #region Fields
+        public int Balance;
+        #endregion
+
+        #region Constructors
         public Player()
         {
             string name = ConsoleUtility.ReadString("Please enter a name:");
@@ -17,5 +23,6 @@ namespace Slot_Machine
             Balance = balance;
             Console.Clear();
         }
+        #endregion
     }
 }
