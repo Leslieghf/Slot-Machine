@@ -40,10 +40,10 @@ namespace Slot_Machine
             Console.WriteLine($"Welcome to the Slot Machine, {currentPlayer.Name}!\n");
             Console.WriteLine($"You current balance is: {currentPlayer.Balance}\n");
             SelectMainMenuOption();
-            WriteGameView();
+            WriteGameMenuView();
         }
 
-        private void WriteGameView()
+        private void WriteGameMenuView()
         {
             Console.Clear();
             Console.WriteLine($"Welcome to {selectedGameMode.Name}, {currentPlayer.Name}!\n");
@@ -102,7 +102,7 @@ namespace Slot_Machine
         private void ChangeGameMode()
         {
             SelectMainMenuOption();
-            WriteGameView();
+            WriteGameMenuView();
         }
 
         private void Exit()
